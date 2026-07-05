@@ -25,3 +25,14 @@ $$k = \frac{q \cdot \Delta x}{A \cdot \Delta T}$$
 * **Corriente Máxima ($I_{max}$):** $0.088 \text{ A}$ a $127 \text{ V}$
 
 ---
+##  Arquitectura y Diseño del Sistema
+
+### 1. Diagrama del Bloque Instrumental
+El sistema adquiere las señales analógicas de los termopares mediante un módulo de adquisición de datos compatible con LabVIEW, procesa los parámetros eléctricos de potencia y exporta los arreglos estructurados para su posterior tratamiento digital en Python.
+
+![Diagrama de Bloques del Sistema](docs/Diagrama_Prototipo_Termico.png)
+
+### 2. Pipeline de Análisis de Datos (Data Wrangling)
+El procesamiento numérico ejecutado por el script de Python sigue un flujo estructurado para garantizar la fiabilidad del cálculo de la constante $k$:
+
+![Pipeline de Procesamiento de Datos](docs/Pipeline_Datos_Python.png)
